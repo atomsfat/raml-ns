@@ -1,0 +1,51 @@
+RAML RESTfull Api modeling language
+Tomas Salazar
+atomsmail@gmail.com	
+Twitter: @atomsfat
+
+- JSON Schema fundamentals
+  ✓ ": "http://json-schema.org/draft-04/schema#"
+  ✓ title
+  ✓ description
+  ✓ properties
+  ✓ id
+  ✓ type
+    ✓ object
+    ✓ integer(minimum, maximum)
+    ✓ string
+    ✓ number(minimum, maximum)
+    ✓ array
+      ✓ items
+  ✓ required([])
+	"$ref"(id")
+
+npm install json-schema-faker --save-dev
+	
+-RAML	
+- title
+- version
+- MediaType(application/json)
+	-!include
+- Schemas(key, resource)
+
+- /Resources
+	-displayName
+	-description
+	-type
+	- methods(delete, get, put, post)
+		-body
+			-schema
+		 	-multipart/form-data:
+		 		-formParameters
+					file
+		-queryParameters(displayName, type, required)
+		-responses
+			-200,400,500
+				-body
+					schema (<<resourcePathName | !singularize>>)
+					
+/{UriParameteters}
+
+- ResourceTypes
+	-Collection
+	-Member
