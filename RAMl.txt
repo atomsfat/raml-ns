@@ -15,6 +15,7 @@ Twitter: @atomsfat
     - string
       -minLength/maxLength
       -format[date-time, email, hostname, ipv4, ipv6 and uri]
+      -pattern["^{A-Z}*"]
     - number(minimum, maximum)
     - enum[]
     - array
@@ -25,6 +26,7 @@ Twitter: @atomsfat
 -faker
  -https://github.com/pateketrueke/json-schema-faker
  -npm install json-schema-faker --save-dev
+ -faker https://github.com/marak/Faker.js/
 	
 -RAML	
 - #%RAML 0.8
