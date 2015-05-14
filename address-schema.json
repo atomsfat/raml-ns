@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Address",
+  "type": "object",
+  "id": "address-schema.json",
+  "description" : "Simple address",
+  "properties" : {
+    "street" : {
+      "type" : "string",
+      "minLength" : 5
+    },
+    "county" : {
+      "type" : "string"
+    },
+    "countryCode" : {
+      "type" : "string",
+      "minLength" : 2,
+      "maxLength" : 2
+    }
+  },
+  "required": ["street", "county", "countryCode"]
+}

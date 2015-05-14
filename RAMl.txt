@@ -16,25 +16,28 @@ Twitter: @atomsfat
       -minLength/maxLength
       -format[date-time, email, hostname, ipv4, ipv6 and uri]
     - number(minimum, maximum)
-    - enum
+    - enum[]
     - array
       - items
   - required([])
-	$ref: 'id'
-
-npm install json-schema-faker --save-dev
+	- '$ref': 'id'
+  
+-faker
+ -https://github.com/pateketrueke/json-schema-faker
+ -npm install json-schema-faker --save-dev
 	
 -RAML	
+- #%RAML 0.8
 - title
 - version
-- MediaType(application/json)
-	-!include
-- Schemas(key, resource)
+- mediaType(application/json)	
+- schemas(key, resource)
+  -!include
 
-- /Resources
+- /<resources>
 	-displayName
 	-description
-	-type
+	-type(ResourceTypes)
 	- methods(delete, get, put, post)
 		-body
 			-schema
@@ -52,3 +55,10 @@ npm install json-schema-faker --save-dev
 - ResourceTypes
 	-Collection
 	-Member
+
+-Tools
+  -https://github.com/gextech/raml-mockup
+  -npm install -g raml-mockup
+  
+-Code generation https://github.com/atomsfat/raml2code-example  
+  

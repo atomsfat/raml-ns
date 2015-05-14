@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type" : "array",
+  "description" : "A bunch of people",
+  "items" : {
+    "$ref" : "person-schema.json"
+  }
+}

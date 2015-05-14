@@ -1,0 +1,24 @@
+#%RAML 0.8
+---
+title: Super App api
+version: v1
+mediaType: Application/json
+schemas:
+  - person: !include ./person-schema.json
+  - people: !include ./people-schema.json
+  - address: !include ./address-schema.json
+/persons:
+  displayName: "People or person"
+  description: "Simple crud person" 
+  get:
+    responses:
+      200:
+        body:
+          schema: people
+  post:
+    body:
+      schema: person
+    responses:
+      200:
+        body:
+          schema: person          

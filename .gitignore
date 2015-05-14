@@ -1,2 +1,3 @@
 node_modules
 .temp-faker.js
+npm-debug.log

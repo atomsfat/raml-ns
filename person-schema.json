@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Simple Person",
+  "type" : "object",
+  "id" : "person-schema.json",
+  "description": "Barebones person",
+  "properties" : {
+    "name" : {
+      "type" : "string",
+      "description": "Nombre",
+      "maxLength" : 15,
+      "minLength" : 6
+    },
+    "mail" : {
+      "type" : "string",
+      "format" : "email"
+    },
+    "age" : {
+      "type" : "integer",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "weight" : {
+      "type" : "number",
+      "minimum" : 0,
+      "maximum" : 100
+    },
+    "hobbies" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "address" : {
+      "$ref" : "address-schema.json"
+    }
+  },
+  "required" : ["name", "age", "address"]
+}

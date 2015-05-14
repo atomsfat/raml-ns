@@ -6,7 +6,10 @@
   "dependencies": {
     "json-schema-faker": "^0.1.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "raml-parser": "^0.8.11",
+    "ramlev": "^0.3.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
